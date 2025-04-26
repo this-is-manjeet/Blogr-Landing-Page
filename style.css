@@ -73,32 +73,46 @@ img {
 /* End */
 
 body {
+    --padding-inline: 10rem;
+    --padding-block: 60px;
+
     font-family: var(--font-overpass);
     background-color: var(--white);
+    font-size: var(--font-size);
 }
 
 .header {
-    background-image: linear-gradient(var(--orange-300), var(--red-550));
-    padding: 3.75rem 10rem;
-    /* border: 2px solid yellow; */
+    /* background-image: url("./images/bg-pattern-intro-desktop.svg"), linear-gradient(90deg, var(--orange-300), var(--red-550));
+    padding: 3.75rem 10rem 30px;
+    background-position: 26% 52%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 7rem; */
+    background-image: linear-gradient(90deg, var(--orange-300), var(--red-550));
+    border-bottom-left-radius: 7rem;
+    height: 600px;
+    padding-inline: var(--padding-inline);
+    padding-block: var(--padding-block);
 }
 
 .nav-section {
-    border: 2px solid green;
+    /* border: 1px solid var(--white); */
     font-family: var(--font-ubuntu);
     gap: 4rem;
+    /* padding-top: 60px; */
 }
 
 .nav {
-    /* border: 2px solid var(--purple-900); */
+    /* border: 1px solid var(--white); */
     width: 100%;
 }
 
 .nav__items {
+    /* border: 1px solid var(--white); */
     gap: 2rem;
 }
 
 .nav__button {
+    /* border: 1px solid var(--white); */
     background-color: transparent;
     border: 0;
     color: var(--white);
@@ -127,13 +141,12 @@ body {
 }
 
 .menu {
-    background-color: var(--orange-300);
+    background-color: var(--white);
     padding: 2rem 1.5rem;
     border-radius: 0.313rem;
     display: grid;
     gap: 1.25rem;
     width: 10.5rem;
-    border: 2px solid var(--gray-900);
 }
 
 .menu__item {
@@ -157,16 +170,20 @@ body {
 
 .nav__button-filled {
     background-color: var(--white);
-    padding: 1rem 2.5rem;
+    padding: 1rem 2.375rem;
     color: var(--red-400);
     border-radius: 1000px;
     font-weight: var(--fw-bold);
 }
 
 .content-section {
-    border: 2px solid white;
+    /* border: 1px solid var(--white); */
     text-align: center;
     color: var(--white);
+    /* padding-block: 124px; */
+    /* height: calc(100% - 60px); */
+    height: 100%;
+    align-content: center;
 }
 
 .content-section h1 {
@@ -177,12 +194,29 @@ body {
 .content-section p {
     font-size: 1.25rem;
     font-weight: var(--fw-light);
+    padding-block: 24px 48px;
+}
+
+.button-group {
+    font-family: var(--font-ubuntu);
+    font-weight: var(--fw-bold);
+    gap: 1rem;
 }
 
 .btn {
     background-color: transparent;
+    border: 0;
+    border-radius: 1000px;
     padding: 1rem 1.5rem;
     cursor: pointer;
+    color: var(--white);
+}
+
+.btn-filled {
+    background-color: var(--white);
+    color: var(--red-500);
+}
+
+.btn-outline {
     border: 1px solid var(--white);
-    border-radius: 1000px;
 }
